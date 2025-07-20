@@ -1,0 +1,184 @@
+* { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background: #1e272e;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logo { font-size: 1.5em; font-weight: bold; display: flex; align-items: center; }
+.logo-img {
+  height: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+}
+nav a:hover { color: #00d8d6; }
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
+              url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80') center center/cover;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+.hero h1 { font-size: 2em; margin-bottom: 10px; }
+
+.section {
+  padding: 50px 20px;
+  background: #fff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease;
+}
+.section.visible { opacity: 1; transform: translateY(0); }
+.section h2 { margin-bottom: 20px; font-size: 1.8em; color: #2c3e50; }
+
+.business-areas {
+  text-align: center;
+  padding: 60px 20px;
+}
+.area-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.area-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.area-card:hover { transform: translateY(-5px); }
+.area-card img { width: 100%; height: 200px; object-fit: cover; }
+.area-card h3 { margin: 15px 0 5px; font-size: 1.2em; }
+.area-card p { padding: 0 15px 20px; font-size: 0.95em; }
+
+.service-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.service-item {
+  width: 200px;
+  text-align: center;
+}
+.service-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.service-item p { margin-top: 10px; }
+
+.contact-section p { margin: 10px 0; }
+.whatsapp-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #25D366;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.whatsapp-btn:hover { background: #128C7E; }
+
+.custom-footer {
+  background-color: #1e272e;
+  color: white;
+  padding: 15px 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  margin: 5px 0;
+}
+
+.footer-left a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: 500;
+}
+
+.footer-left a:hover {
+  color: #00d8d6;
+}
+
+.footer-center {
+  text-align: center;
+  flex: 1;
+  color: #eee;
+}
+
+.footer-right {
+  text-align: right;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    text-align: center;
+  }
+}
+/* ABOUT SECTION */
+.about-section {
+  background-color: #72aef8;
+  padding: 40px 25px;
+  margin: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.about-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #000912;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-section p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #080808;
+}
+
+.about-section strong {
+  font-weight: 600;
+  color: #00080d;
+}
